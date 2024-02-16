@@ -1,0 +1,16 @@
+<div class="fam" >
+<form [formGroup]="loginuser">
+    <fieldset>
+        <legend>Details</legend>
+        <input type="text" name="Name"placeholder="Enter name" [(ngModel)]="Name" formControlName="Name"><br>
+        <span style="color:red" *ngIf= " Namee && Namee.invalid && Namee.touched">can't Empty</span><br>
+        <input type="text" name="Email" placeholder="Enter Email" [(ngModel)]="Email" formControlName="Email"><br>
+        <span style="color:red" *ngIf= " Emaill && Emaill.invalid &&  Emaill.touched">Can't Empty</span><br>
+        <input type="date" name="DateOfBirth" [(ngModel)]="DateOfBirth" formControlName="DateOfBirth"><br>
+        <span style="color:red" *ngIf= " DateOfBirthh && DateOfBirthh.invalid && DateOfBirthh.touched">can't Empty</span><br>
+        <input type="text" name="Address" placeholder="Address" [(ngModel)]="Address" formControlName="Address"><br>
+        <span style="color:red" *ngIf= "Addresss && Addresss.invalid && Addresss.touched">can't Empty</span><br>
+        <button type="button" (click)="adddetails()" [disabled]="loginuser.invalid">Submit</button>
+    </fieldset>
+</form>
+</div>
